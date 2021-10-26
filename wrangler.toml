@@ -1,7 +1,7 @@
 name = "hamati"
 type = "webpack"
 
-account_id = ""
+account_id = "080495947fd76fd8c485663c18ac3672"
 workers_dev = true
 route = ""
 zone_id = ""
