@@ -15,7 +15,7 @@ router.get('/', () => {
 /**
  * umislot
  */
-router.get('/umislot', () => {
+router.post('/umislot', () => {
     const rand = () => {
         return Math.floor(Math.random() * 4)
     }
@@ -34,7 +34,7 @@ router.get('/umislot', () => {
         {
             type: 'section',
             text: {
-                type: 'text',
+                type: 'plain_text',
                 text: textLines.join('\n'),
             },
         },
