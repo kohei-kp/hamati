@@ -20,11 +20,11 @@ router.get('/umislot', () => {
         return Math.floor(Math.random() * 4)
     }
 
-    const veries = [':very:', ':very-left', ':very-right:', ':very-bottom:']
-    const longs = [':long:', ':long-left', ':long-right:', ':long-bottom:']
+    const veries = [':very:', ':very-left:', ':very-right:', ':very-bottom:']
+    const longs = [':long:', ':long-left:', ':long-right:', ':long-bottom:']
     const umityans = [
         ':umityan:',
-        ':umityan-left',
+        ':umityan-left:',
         ':umityan-right:',
         ':umityan-bottom:',
     ]
@@ -43,7 +43,7 @@ router.get('/umislot', () => {
     return new Response(
         JSON.stringify({
             blocks,
-            resonse_type: 'in_channel',
+            response_type: 'in_channel',
         }),
         { headers: { 'Content-type': 'application/json' } }
     )
