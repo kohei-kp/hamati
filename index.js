@@ -49,6 +49,36 @@ router.post('/umislot', () => {
     )
 })
 
+/**
+ * slot
+ */
+router.post('/slot', () => {
+    const rand = () => {
+        return Math.floor(Math.random() * 4)
+    }
+
+    const items = [':7:', ':cherries:', ':watermelon:', ':bell:']
+
+    const textLines = [items[rand()], items[rand()], items[rand()]]
+    const blocks = [
+        {
+            type: 'section',
+            text: {
+                type: 'plain_text',
+                text: textLines.join('\n'),
+            },
+        },
+    ]
+
+    return new Response(
+        JSON.stringify({
+            blocks,
+            response_type: 'in_channel',
+        }),
+        { headers: { 'Content-type': 'application/json' } }
+    )
+})
+
 /*
 This route demonstrates path parameters, allowing you to extract fragments from the request
 URL.
