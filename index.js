@@ -58,14 +58,14 @@ router.post('/slot', () => {
     }
 
     const items = [':7:', ':cherries:', ':watermelon:', ':bell:']
+    const text = items[rand()] + items[rand()] + items[rand()]
 
-    const textLines = [items[rand()], items[rand()], items[rand()]]
     const blocks = [
         {
             type: 'section',
             text: {
                 type: 'plain_text',
-                text: textLines.join('\n'),
+                text,
             },
         },
     ]
