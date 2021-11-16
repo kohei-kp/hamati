@@ -58,7 +58,7 @@ router.post('/slot', () => {
     }
 
     const items = [':7:', ':cherries:', ':watermelon:', ':bell:']
-    const text = items[rand()] + items[rand()] + items[rand()]
+    const text = `${items[rand()]} ${items[rand()]} ${items[rand()]}`
 
     const blocks = [
         {
